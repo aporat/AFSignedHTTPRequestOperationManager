@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.platform = :ios, '6.0'
   s.requires_arc = true
   s.source_files = 'src/*.{h,m}'
-  s.clean_paths = "Classes", "*.{plist,pch,md,m,xcodeproj}", "example"
   s.dependency 'IGDigest', '~> 1.1.0'
   s.dependency 'AFNetworking', '~> 2'
 
