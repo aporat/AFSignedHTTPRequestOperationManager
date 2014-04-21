@@ -41,7 +41,7 @@
                          success:(void (^)(AFHTTPRequestOperation *operation))success
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
-    NSDictionary *params = [self signatureParamsWithMethod:@"GET" URLString:URLString parameters:parameters];
+    NSDictionary *params = [self signatureParamsWithMethod:@"HEAD" URLString:URLString parameters:parameters];
 
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"HEAD" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:params error:nil];
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *requestOperation, __unused id responseObject) {
@@ -59,7 +59,7 @@
                          success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
-    NSDictionary *params = [self signatureParamsWithMethod:@"GET" URLString:URLString parameters:parameters];
+    NSDictionary *params = [self signatureParamsWithMethod:@"POST" URLString:URLString parameters:parameters];
     
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:params error:nil];
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
