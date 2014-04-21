@@ -7,7 +7,7 @@ Sample usage is available in the `example` project.
 
 ## Requirements
 
-`AFSignedHTTPRequestOperationManager` reiles on `AFNetworking` 2.0 +.
+`AFSignedHTTPRequestOperationManager` reiles on `AFNetworking 2.0` and `IGDigest`.
 
 ## Installation
 
@@ -33,7 +33,8 @@ Copy the folder `src` to your project.
 `AFSignedHTTPRequestOperationManager` is a subclass of `AFHTTPRequestOperationManager`, so use the class as a normally use a `AFNetworking` api client.
 
 
-### extend `AFSignedHTTPRequestOperationManager` into your api client class
+### extend `AFSignedHTTPRequestOperationManager`
+
 ```objective-c
 #import "AFSignedHTTPRequestOperationManager.h"
 
