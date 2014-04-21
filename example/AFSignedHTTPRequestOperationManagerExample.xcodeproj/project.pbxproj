@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5305FE751905513900CDAEC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305FE741905513900CDAEC6 /* Foundation.framework */; };
+		5305FE771905513900CDAEC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305FE761905513900CDAEC6 /* CoreGraphics.framework */; };
+		5305FE791905513900CDAEC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305FE781905513900CDAEC6 /* UIKit.framework */; };
+		5305FE7F1905513900CDAEC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5305FE7D1905513900CDAEC6 /* InfoPlist.strings */; };
+		5305FE811905513900CDAEC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5305FE801905513900CDAEC6 /* main.m */; };
+		5305FE851905513900CDAEC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5305FE841905513900CDAEC6 /* AppDelegate.m */; };
+		5305FE881905513900CDAEC6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5305FE861905513900CDAEC6 /* Main_iPhone.storyboard */; };
+		5305FE8E1905513900CDAEC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5305FE8D1905513900CDAEC6 /* ViewController.m */; };
+		5305FE901905513900CDAEC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5305FE8F1905513900CDAEC6 /* Images.xcassets */; };
+		53EF46351905530300124757 /* AFSignedHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EF46341905530300124757 /* AFSignedHTTPRequestOperationManager.m */; };
+		53EF46391905533800124757 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EF46381905533800124757 /* APIClient.m */; };
+		75C5FE5081414DCEAE29F1F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FE730B47CD4AE69DE2DC43 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5305FE711905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFSignedHTTPRequestOperationManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5305FE741905513900CDAEC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5305FE761905513900CDAEC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5305FE781905513900CDAEC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5305FE7C1905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFSignedHTTPRequestOperationManagerExample-Info.plist"; sourceTree = "<group>"; };
+		5305FE7E1905513900CDAEC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5305FE801905513900CDAEC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5305FE821905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFSignedHTTPRequestOperationManagerExample-Prefix.pch"; sourceTree = "<group>"; };
+		5305FE831905513900CDAEC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5305FE841905513900CDAEC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5305FE871905513900CDAEC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5305FE8C1905513900CDAEC6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5305FE8D1905513900CDAEC6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5305FE8F1905513900CDAEC6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5305FE961905513900CDAEC6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		53EF46331905530300124757 /* AFSignedHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSignedHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		53EF46341905530300124757 /* AFSignedHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSignedHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		53EF46371905533800124757 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		53EF46381905533800124757 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		8496DC6A1EAE45CDAB88D5F9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		99FE730B47CD4AE69DE2DC43 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5305FE6E1905513900CDAEC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5305FE771905513900CDAEC6 /* CoreGraphics.framework in Frameworks */,
+				5305FE791905513900CDAEC6 /* UIKit.framework in Frameworks */,
+				5305FE751905513900CDAEC6 /* Foundation.framework in Frameworks */,
+				75C5FE5081414DCEAE29F1F9 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5305FE681905513900CDAEC6 = {
+			isa = PBXGroup;
+			children = (
+				53EF46321905530300124757 /* src */,
+				5305FE7A1905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample */,
+				5305FE731905513900CDAEC6 /* Frameworks */,
+				5305FE721905513900CDAEC6 /* Products */,
+				8496DC6A1EAE45CDAB88D5F9 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		5305FE721905513900CDAEC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5305FE711905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5305FE731905513900CDAEC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5305FE741905513900CDAEC6 /* Foundation.framework */,
+				5305FE761905513900CDAEC6 /* CoreGraphics.framework */,
+				5305FE781905513900CDAEC6 /* UIKit.framework */,
+				5305FE961905513900CDAEC6 /* XCTest.framework */,
+				99FE730B47CD4AE69DE2DC43 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5305FE7A1905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample */ = {
+			isa = PBXGroup;
+			children = (
+				53EF46361905531900124757 /* Example Client */,
+				5305FE831905513900CDAEC6 /* AppDelegate.h */,
+				5305FE841905513900CDAEC6 /* AppDelegate.m */,
+				5305FE861905513900CDAEC6 /* Main_iPhone.storyboard */,
+				5305FE8C1905513900CDAEC6 /* ViewController.h */,
+				5305FE8D1905513900CDAEC6 /* ViewController.m */,
+				5305FE8F1905513900CDAEC6 /* Images.xcassets */,
+				5305FE7B1905513900CDAEC6 /* Supporting Files */,
+			);
+			path = AFSignedHTTPRequestOperationManagerExample;
+			sourceTree = "<group>";
+		};
+		5305FE7B1905513900CDAEC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5305FE7C1905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample-Info.plist */,
+				5305FE7D1905513900CDAEC6 /* InfoPlist.strings */,
+				5305FE801905513900CDAEC6 /* main.m */,
+				5305FE821905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53EF46321905530300124757 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53EF46331905530300124757 /* AFSignedHTTPRequestOperationManager.h */,
+				53EF46341905530300124757 /* AFSignedHTTPRequestOperationManager.m */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		53EF46361905531900124757 /* Example Client */ = {
+			isa = PBXGroup;
+			children = (
+				53EF46371905533800124757 /* APIClient.h */,
+				53EF46381905533800124757 /* APIClient.m */,
+			);
+			name = "Example Client";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5305FE701905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5305FEA61905513900CDAEC6 /* Build configuration list for PBXNativeTarget "AFSignedHTTPRequestOperationManagerExample" */;
+			buildPhases = (
+				8B98D99BB0274508A5F19CCA /* Check Pods Manifest.lock */,
+				5305FE6D1905513900CDAEC6 /* Sources */,
+				5305FE6E1905513900CDAEC6 /* Frameworks */,
+				5305FE6F1905513900CDAEC6 /* Resources */,
+				9C8E565774A547998E59E5A7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFSignedHTTPRequestOperationManagerExample;
+			productName = AFSignedHTTPRequestOperationManagerExample;
+			productReference = 5305FE711905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5305FE691905513900CDAEC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = None;
+			};
+			buildConfigurationList = 5305FE6C1905513900CDAEC6 /* Build configuration list for PBXProject "AFSignedHTTPRequestOperationManagerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5305FE681905513900CDAEC6;
+			productRefGroup = 5305FE721905513900CDAEC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5305FE701905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5305FE6F1905513900CDAEC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5305FE901905513900CDAEC6 /* Images.xcassets in Resources */,
+				5305FE881905513900CDAEC6 /* Main_iPhone.storyboard in Resources */,
+				5305FE7F1905513900CDAEC6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B98D99BB0274508A5F19CCA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8E565774A547998E59E5A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5305FE6D1905513900CDAEC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EF46391905533800124757 /* APIClient.m in Sources */,
+				5305FE8E1905513900CDAEC6 /* ViewController.m in Sources */,
+				5305FE851905513900CDAEC6 /* AppDelegate.m in Sources */,
+				53EF46351905530300124757 /* AFSignedHTTPRequestOperationManager.m in Sources */,
+				5305FE811905513900CDAEC6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5305FE7D1905513900CDAEC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5305FE7E1905513900CDAEC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5305FE861905513900CDAEC6 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5305FE871905513900CDAEC6 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5305FEA41905513900CDAEC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5305FEA51905513900CDAEC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5305FEA71905513900CDAEC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8496DC6A1EAE45CDAB88D5F9 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFSignedHTTPRequestOperationManagerExample/AFSignedHTTPRequestOperationManagerExample-Prefix.pch";
+				INFOPLIST_FILE = "AFSignedHTTPRequestOperationManagerExample/AFSignedHTTPRequestOperationManagerExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5305FEA81905513900CDAEC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8496DC6A1EAE45CDAB88D5F9 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFSignedHTTPRequestOperationManagerExample/AFSignedHTTPRequestOperationManagerExample-Prefix.pch";
+				INFOPLIST_FILE = "AFSignedHTTPRequestOperationManagerExample/AFSignedHTTPRequestOperationManagerExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5305FE6C1905513900CDAEC6 /* Build configuration list for PBXProject "AFSignedHTTPRequestOperationManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5305FEA41905513900CDAEC6 /* Debug */,
+				5305FEA51905513900CDAEC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5305FEA61905513900CDAEC6 /* Build configuration list for PBXNativeTarget "AFSignedHTTPRequestOperationManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5305FEA71905513900CDAEC6 /* Debug */,
+				5305FEA81905513900CDAEC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5305FE691905513900CDAEC6 /* Project object */;
+}
