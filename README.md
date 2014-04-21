@@ -1,5 +1,8 @@
 # AFSignedHTTPRequestOperationManager
 
+![](http://cocoapod-badges.herokuapp.com/v/AFSignedHTTPRequestOperationManager/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/AFSignedHTTPRequestOperationManager/badge.png)
+
+
 AFNetworking 2.0 AFHTTPRequestOperationManager with API signed SHA256 signature and timestamp
 
 Sample usage is available in the `example` project.
