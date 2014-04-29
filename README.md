@@ -7,6 +7,32 @@ AFNetworking 2.0 AFHTTPRequestOperationManager with API signed SHA256 signature 
 
 Sample usage is available in the `example` project.
 
+The purpose of the SHA256 signature is to guarantee that restful API requests are being delivered only by authorized api clients.
+
+For example, 
+
+
+```objective-c
+    [[APIClient sharedClient] POST:@"/users" parameters:@{@"some" : @"parameters"} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+```
+will generate a set of auth parameters which can be verified on the server.
+
+```ruby
+{
+  :some           => "parameters",
+  :auth_timestamp => 1273231888,
+  :auth_signature => "28b6bb0f242f71064916fad6ae463fe91f5adc302222dfc02c348ae1941eaf80",
+  :auth_version   => "2",
+  :auth_key       => "my_key"
+}
+
+```
+
+
 
 ## Requirements
 
