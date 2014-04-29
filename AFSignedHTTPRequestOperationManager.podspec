@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name     = 'AFSignedHTTPRequestOperationManager'
   s.version  = '1.0.0'
   s.license  = 'Apache License, Version 2.0'
-  s.summary  = 'AFNetworking 2.0 AFHTTPRequestOperationManager with API signed SHA256 signature and timestamping'
+  s.summary  = 'AFNetworkingAutomatically sign AFNetworking api requests with SHA-256 hash signature and timestamp'
   s.homepage = 'https://github.com/aporat/AFSignedHTTPRequestOperationManager'
   s.author   = { 'Adar Porat' => 'http://github.com/aporat' }
   s.source   = { :git => 'https://github.com/aporat/AFSignedHTTPRequestOperationManager.git' }
