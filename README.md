@@ -1,7 +1,7 @@
 # AFSignedHTTPRequestOperationManager
 
-![](http://cocoapod-badges.herokuapp.com/v/AFSignedHTTPRequestOperationManager/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/AFSignedHTTPRequestOperationManager/badge.png)
-
+![](http://cocoapod-badges.herokuapp.com/v/AFSignedHTTPRequestOperationManager/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/AFSignedHTTPRequestOperationManager/badge.png) &nbsp; 
+[![Dependency Status](https://www.versioneye.com/user/projects/5376544514c15877850000b4/badge.svg)](https://www.versioneye.com/user/projects/5376544514c15877850000b4)
 
 Automatically sign AFNetworking api requests with SHA-256 hash signature and timestamp.
 
