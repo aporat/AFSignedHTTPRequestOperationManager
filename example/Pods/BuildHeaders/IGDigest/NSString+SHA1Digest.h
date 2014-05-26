@@ -1,1 +1,0 @@
-../../IGDigest/IGDigest/Digest/NSString+SHA1Digest.h
