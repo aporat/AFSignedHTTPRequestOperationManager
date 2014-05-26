@@ -8,3 +8,7 @@
 
 
 /example/.DS_Store
+
+/example/Pods/
+
+/example/AFSignedHTTPRequestOperationManagerExample.xcworkspace/xcuserdata/adarporat.xcuserdatad/UserInterfaceState.xcuserstate
