@@ -22,6 +22,17 @@
 
 #pragma mark -
 
+- (instancetype)initWithBaseURL:(NSURL *)url {
+    self.clientVersion = @"2";
+    
+    self = [super initWithBaseURL:url];
+    if (!self) {
+        return nil;
+    }
+    
+    return self;
+}
+
 - (AFHTTPRequestOperation *)GET:(NSString *)URLString
                      parameters:(id)parameters
                         success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
@@ -42,7 +53,7 @@
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSDictionary *params = [self signatureParamsWithMethod:@"HEAD" URLString:URLString parameters:parameters];
-
+    
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"HEAD" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:params error:nil];
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *requestOperation, __unused id responseObject) {
         if (success) {
@@ -75,7 +86,7 @@
                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSDictionary *params = [self signatureParamsWithMethod:@"POST" URLString:URLString parameters:parameters];
-
+    
     NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:params constructingBodyWithBlock:block error:nil];
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
     [self.operationQueue addOperation:operation];
@@ -89,7 +100,7 @@
                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSDictionary *params = [self signatureParamsWithMethod:@"PUT" URLString:URLString parameters:parameters];
-
+    
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"PUT" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:params error:nil];
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
     [self.operationQueue addOperation:operation];
@@ -103,7 +114,7 @@
                           failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSDictionary *params = [self signatureParamsWithMethod:@"PATCH" URLString:URLString parameters:parameters];
-
+    
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"PATCH" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:params error:nil];
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
     [self.operationQueue addOperation:operation];
@@ -117,7 +128,7 @@
                            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     NSDictionary *params = [self signatureParamsWithMethod:@"DELETE" URLString:URLString parameters:parameters];
-
+    
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"DELETE" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:params error:nil];
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request success:success failure:failure];
     [self.operationQueue addOperation:operation];
@@ -136,7 +147,7 @@
     
     NSDictionary *signatureParams = [self signatureParamsWithMethod:method URLString:URLString parameters:params];
     [params addEntriesFromDictionary:signatureParams];
-
+    
     return params;
 }
 
@@ -152,7 +163,7 @@
     signature = [signature SHA256HMACWithKey:self.clientSecret];
     
     NSDictionary *signatureParams = @{
-                                      @"auth_version": @"2",
+                                      @"auth_version": self.clientVersion,
                                       @"auth_client_id": self.clientId,
                                       @"auth_timestamp": timestamp,
                                       @"auth_signature": signature

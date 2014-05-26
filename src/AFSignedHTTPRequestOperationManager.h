@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSString *clientId;
 @property (nonatomic, strong) NSString *clientSecret;
+@property (nonatomic, strong) NSString *clientVersion;
 
 - (NSDictionary *)signatureParamsWithMethod:(NSString *)method URLString:(NSString *)URLString parameters:(NSDictionary *)params;
 
