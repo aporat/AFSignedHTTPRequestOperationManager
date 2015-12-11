@@ -18,6 +18,7 @@
 		5305FE901905513900CDAEC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5305FE8F1905513900CDAEC6 /* Images.xcassets */; };
 		5333BCAB1C1A63B600BD8167 /* AFSignedSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5333BCAA1C1A63B600BD8167 /* AFSignedSessionManager.m */; };
 		53EF46391905533800124757 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EF46381905533800124757 /* APIClient.m */; };
+		53FE16101C1B1E96004A86ED /* AFSignedHTTPRequestOperationManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 53FE160F1C1B1E96004A86ED /* AFSignedHTTPRequestOperationManager.podspec */; };
 		75C5FE5081414DCEAE29F1F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FE730B47CD4AE69DE2DC43 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		5333BCAA1C1A63B600BD8167 /* AFSignedSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSignedSessionManager.m; sourceTree = "<group>"; };
 		53EF46371905533800124757 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		53EF46381905533800124757 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		53FE160F1C1B1E96004A86ED /* AFSignedHTTPRequestOperationManager.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AFSignedHTTPRequestOperationManager.podspec; path = ../AFSignedHTTPRequestOperationManager.podspec; sourceTree = "<group>"; };
 		99FE730B47CD4AE69DE2DC43 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 		5305FE681905513900CDAEC6 = {
 			isa = PBXGroup;
 			children = (
+				53FE160F1C1B1E96004A86ED /* AFSignedHTTPRequestOperationManager.podspec */,
 				53EF46321905530300124757 /* src */,
 				5305FE7A1905513900CDAEC6 /* AFSignedHTTPRequestOperationManagerExample */,
 				5305FE731905513900CDAEC6 /* Frameworks */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5305FE901905513900CDAEC6 /* Images.xcassets in Resources */,
+				53FE16101C1B1E96004A86ED /* AFSignedHTTPRequestOperationManager.podspec in Resources */,
 				5305FE881905513900CDAEC6 /* Main_iPhone.storyboard in Resources */,
 				5305FE7F1905513900CDAEC6 /* InfoPlist.strings in Resources */,
 			);
