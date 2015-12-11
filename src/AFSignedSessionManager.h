@@ -19,59 +19,50 @@
 
 @interface AFSignedSessionManager : AFHTTPSessionManager
 
-@property (nonatomic, strong) NSString *clientId;
-@property (nonatomic, strong) NSString *clientSecret;
-@property (nonatomic, strong) NSString *clientVersion;
+@property (nonatomic, strong, nonnull) NSString *clientId;
+@property (nonatomic, strong, nonnull) NSString *clientSecret;
+@property (nonatomic, strong, nonnull) NSString *clientVersion;
 
-- (NSURLSessionDataTask *)GET:(NSString *)URLString
-                   parameters:(id)parameters
-                      success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error, id responseObject))failure;
-
-
-- (NSURLSessionDataTask *)HEAD:(NSString *)URLString
-                    parameters:(id)parameters
-                       success:(void (^)(NSURLSessionDataTask *task))success
-                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error, id responseObject))failure;
+- (nullable NSURLSessionDataTask *)GET:(nullable NSString *)URLString
+                            parameters:(nullable id)parameters
+                               success:(nullable void (^)(NSURLSessionDataTask *  _Nullable task, id _Nullable responseObject))success
+                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error, id  _Nullable responseObject))failure;
 
 
-- (NSURLSessionDataTask *)POST:(NSString *)URLString
-                    parameters:(id)parameters
-                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error, id responseObject))failure;
+- (nullable NSURLSessionDataTask *)POST:(nullable NSString *)URLString
+                            parameters:(nullable id)parameters
+                               success:(nullable void (^)(NSURLSessionDataTask *  _Nullable task, id _Nullable responseObject))success
+                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error, id  _Nullable responseObject))failure;
 
 
-- (NSURLSessionDataTask *)POST:(NSString *)URLString
-                    parameters:(id)parameters
-     constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
-                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error, id responseObject))failure;
+
+- (nullable NSURLSessionDataTask *)PUT:(nullable NSString *)URLString
+                            parameters:(nullable id)parameters
+                               success:(nullable void (^)(NSURLSessionDataTask *  _Nullable task, id _Nullable responseObject))success
+                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error, id  _Nullable responseObject))failure;
 
 
-- (NSURLSessionDataTask *)PUT:(NSString *)URLString
-                   parameters:(id)parameters
-                      success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error, id responseObject))failure;
+
+- (nullable NSURLSessionDataTask *)PATCH:(nullable NSString *)URLString
+                            parameters:(nullable id)parameters
+                               success:(nullable void (^)(NSURLSessionDataTask *  _Nullable task, id _Nullable responseObject))success
+                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error, id  _Nullable responseObject))failure;
 
 
-- (NSURLSessionDataTask *)PATCH:(NSString *)URLString
-                     parameters:(id)parameters
-                        success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                        failure:(void (^)(NSURLSessionDataTask *task, NSError *error, id responseObject))failure;
 
+- (nullable NSURLSessionDataTask *)DELETE:(nullable NSString *)URLString
+                            parameters:(nullable id)parameters
+                               success:(nullable void (^)(NSURLSessionDataTask *  _Nullable task, id _Nullable responseObject))success
+                               failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError * _Nullable error, id  _Nullable responseObject))failure;
 
-- (NSURLSessionDataTask *)DELETE:(NSString *)URLString
-                      parameters:(id)parameters
-                         success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                         failure:(void (^)(NSURLSessionDataTask *task, NSError *error, id responseObject))failure;
+- (nullable NSURLSessionDataTask *)dataTaskWithHTTPMethod:(nullable NSString *)method
+                                                URLString:(NSString * _Nullable)URLString
+                                               parameters:(id _Nullable)parameters
+                                           uploadProgress:(nullable void (^)(NSProgress * _Nullable uploadProgress)) uploadProgress
+                                         downloadProgress:(nullable void (^)(NSProgress * _Nullable downloadProgress)) downloadProgress
+                                                  success:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, id _Nullable))success
+                                                  failure:(void (^ _Nullable)(NSURLSessionDataTask * _Nullable, NSError * _Nullable, id _Nullable))failure;
 
-
-- (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
-                                       URLString:(NSString *)URLString
-                                      parameters:(id)parameters
-                                         success:(void (^)(NSURLSessionDataTask *, id))success
-                                         failure:(void (^)(NSURLSessionDataTask *, NSError *, id))failure;
-
-- (NSDictionary *)signatureParamsWithMethod:(NSString *)method URLString:(NSString *)URLString parameters:(NSDictionary *)params;
+- (nullable NSDictionary *)signatureParamsWithMethod:(NSString * _Nullable)method URLString:(NSString * _Nullable)URLString parameters:(NSDictionary * _Nullable)params;
 
 @end

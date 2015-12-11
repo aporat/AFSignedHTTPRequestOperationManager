@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 None. All rights reserved.
 //
 
-#import "AFSignedHTTPRequestOperationManager.h"
+#import "AFSignedSessionManager.h"
 
-@interface APIClient : AFSignedHTTPRequestOperationManager
+@interface APIClient : AFSignedSessionManager
 
-+ (instancetype)sharedClient;
++ (instancetype)sharedInstance;
 
 @end

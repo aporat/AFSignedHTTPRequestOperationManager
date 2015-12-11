@@ -10,25 +10,27 @@
 
 @implementation APIClient
 
-+ (instancetype)sharedClient {
-    static APIClient *_sharedClient = nil;
-    static dispatch_once_t onceKosherPenguinToken;
-    dispatch_once(&onceKosherPenguinToken, ^{
-        _sharedClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.example.com"]];
-    });
-    
-    return _sharedClient;
++ (instancetype)sharedInstance {
+  static APIClient *_sharedClient = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    _sharedClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.example.com"]];
+  });
+  
+  return _sharedClient;
 }
 
-- (id)initWithBaseURL:(NSURL *)url {
-    self = [super initWithBaseURL:url];
-    if (self) {
-        self.responseSerializer = [AFJSONResponseSerializer serializer];
-        self.clientId = @"CLIENT_ID";
-        self.clientSecret = @"CLIENT_SECRET";
-    }
+- (instancetype)initWithBaseURL:(NSURL *)url {
+  self = [super initWithBaseURL:url];
+  if (self) {
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
+    self.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    return self;
+    self.clientId = @"CLIENT_ID";
+    self.clientSecret = @"CLIENT_SECRET";
+  }
+  
+  return self;
 }
 
 

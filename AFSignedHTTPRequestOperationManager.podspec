@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'AFSignedHTTPRequestOperationManager'
-  s.version  = '1.1.0'
+  s.version  = '3.0.0'
   s.license  = 'Apache License, Version 2.0'
   s.summary  = 'AFNetworkingAutomatically sign AFNetworking api requests with SHA-256 hash signature and timestamp'
   s.homepage = 'https://github.com/aporat/AFSignedHTTPRequestOperationManager'
@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'src/*.{h,m}'
   s.dependency 'IGDigest', '~> 1.1.0'
-  s.dependency 'AFNetworking', '~> 2'
+  s.dependency 'AFNetworking', '~> 3'
 
 end
