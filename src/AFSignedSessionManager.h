@@ -15,7 +15,7 @@
 // limitations under the License.
 //
 
-#import "AFHTTPSessionManager.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface AFSignedSessionManager : AFHTTPSessionManager
 
