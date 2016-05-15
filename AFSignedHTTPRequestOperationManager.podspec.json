@@ -25,7 +25,7 @@
   },
   "source": {
     "git": "https://github.com/aporat/AFSignedHTTPRequestOperationManager.git",
-    "tag": "3.0.0"
+    "tag": "3.0.1"
   },
   "source_files": [
     "src/*.{h,m}"
