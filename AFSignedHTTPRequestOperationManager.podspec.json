@@ -1,7 +1,7 @@
 
 {
   "name": "AFSignedHTTPRequestOperationManager",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "summary": "AFNetworkingAutomatically sign AFNetworking api requests with SHA-256 hash signature and timestamp",
   "homepage": "https://github.com/aporat/AFSignedHTTPRequestOperationManager",
   "license": {
