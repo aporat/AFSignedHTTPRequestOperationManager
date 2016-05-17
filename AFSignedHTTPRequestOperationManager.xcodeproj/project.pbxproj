@@ -10,7 +10,7 @@
 		533E2D631CEB75DF004D12B6 /* AFSignedSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 533E2D611CEB75DF004D12B6 /* AFSignedSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		533E2D641CEB75DF004D12B6 /* AFSignedSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 533E2D621CEB75DF004D12B6 /* AFSignedSessionManager.m */; };
 		533E2D671CEB75F0004D12B6 /* AFSignedHTTPRequestOperationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E2D651CEB75ED004D12B6 /* AFSignedHTTPRequestOperationManagerTests.swift */; };
-		533E2D6C1CEB8789004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 533E2D6B1CEB8789004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		533E2D6E1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 533E2D6D1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DF7DF781CD5393F0099C320 /* AFSignedHTTPRequestOperationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF7DF6D1CD5393E0099C320 /* AFSignedHTTPRequestOperationManager.framework */; };
 		CB608B531E231326916E23FC /* Pods_AFSignedHTTPRequestOperationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80062939D100F908649092B /* Pods_AFSignedHTTPRequestOperationManager.framework */; };
 		FCEEC80D47D4B60AA4424B52 /* Pods_AFSignedHTTPRequestOperationManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCC7DF60969D1D2EAEC9B2D /* Pods_AFSignedHTTPRequestOperationManagerTests.framework */; };
@@ -31,7 +31,7 @@
 		533E2D611CEB75DF004D12B6 /* AFSignedSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSignedSessionManager.h; sourceTree = "<group>"; };
 		533E2D621CEB75DF004D12B6 /* AFSignedSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSignedSessionManager.m; sourceTree = "<group>"; };
 		533E2D651CEB75ED004D12B6 /* AFSignedHTTPRequestOperationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFSignedHTTPRequestOperationManagerTests.swift; sourceTree = "<group>"; };
-		533E2D6B1CEB8789004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFSignedHTTPRequestOperationManager-umbrella.h"; sourceTree = "<group>"; };
+		533E2D6D1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFSignedHTTPRequestOperationManager-umbrella.h"; sourceTree = "<group>"; };
 		6DF7DF6D1CD5393E0099C320 /* AFSignedHTTPRequestOperationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFSignedHTTPRequestOperationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF7DF721CD5393F0099C320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF7DF771CD5393F0099C320 /* AFSignedHTTPRequestOperationManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFSignedHTTPRequestOperationManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +115,7 @@
 		6DF7DF8D1CD53DEC0099C320 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				533E2D6B1CEB8789004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */,
+				533E2D6D1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */,
 				6DF7DF721CD5393F0099C320 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				533E2D631CEB75DF004D12B6 /* AFSignedSessionManager.h in Headers */,
-				533E2D6C1CEB8789004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h in Headers */,
+				533E2D6E1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AFSignedHTTPRequestOperationManager"
-  s.version      = "3.1.0"
+  s.version      = "3.1.1"
   s.license      = { :type => "MIT" }
   s.homepage     = "https://github.com/aporat/AFSignedHTTPRequestOperationManager"
   s.author           = { "Adar Porat" => "adar.porat@gmail.com" }
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "7.0"
 
-  s.source_files = "Source/**/*.{m,h}"
+  s.source_files = "Source/*.{m,h}"
 
   s.requires_arc = true
 
