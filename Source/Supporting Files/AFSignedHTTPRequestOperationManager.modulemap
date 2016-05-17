@@ -1,0 +1,6 @@
+framework module AFSignedHTTPRequestOperationManager {
+  umbrella header "AFSignedHTTPRequestOperationManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

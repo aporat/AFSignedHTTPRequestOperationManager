@@ -1,0 +1,6 @@
+framework module IGDigest {
+  umbrella header "IGDigest-umbrella.h"
+
+  export *
+  module * { export * }
+}
