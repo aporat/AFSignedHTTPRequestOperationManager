@@ -1,9 +1,5 @@
 language: objective-c
 
-branches:
-  only:
-    - master
-
 xcode_workspace: AFSignedHTTPRequestOperationManager.xcworkspace
 xcode_project: AFSignedHTTPRequestOperationManager.xcodeproj
 xcode_scheme: AFSignedHTTPRequestOperationManagerTests
@@ -16,5 +12,5 @@ before_install:
 - pod install
 
 script:
-  - xcodebuild test -workspace "AFSignedHTTPRequestOperationManager.xcworkspace" -scheme AFSignedHTTPRequestOperationManagerTests -destination "platform=iOS Simulator,name=iPhone 6s"
+  - set -o pipefail && xcodebuild test -workspace "AFSignedHTTPRequestOperationManager.xcworkspace" -scheme AFSignedHTTPRequestOperationManagerTests -destination "platform=iOS Simulator,name=iPhone 6s" | xcpretty
   - pod lib lint
