@@ -7,8 +7,4 @@
 # Pods/
 
 
-/example/.DS_Store
-/example/Pods/
-/example/AFSignedHTTPRequestOperationManagerExample.xcworkspace/xcuserdata/adarporat.xcuserdatad/UserInterfaceState.xcuserstate
-/example/AFSignedHTTPRequestOperationManagerExample.xcworkspace/contents.xcworkspacedata
-/example/AFSignedHTTPRequestOperationManagerExample.xcworkspace/
+/.DS_Store

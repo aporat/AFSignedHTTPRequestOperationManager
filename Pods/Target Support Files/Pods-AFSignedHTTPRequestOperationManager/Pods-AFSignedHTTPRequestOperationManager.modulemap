@@ -1,6 +1,0 @@
-framework module Pods_AFSignedHTTPRequestOperationManager {
-  umbrella header "Pods-AFSignedHTTPRequestOperationManager-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -9,6 +9,12 @@ xcode_project: AFSignedHTTPRequestOperationManager.xcodeproj
 xcode_scheme: AFSignedHTTPRequestOperationManagerTests
 osx_image: xcode7.3
 xcode_sdk: iphonesimulator9.3
+cache: cocoapods
+podfile: Podfile
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
+- pod install
 
 script:
   - xcodebuild test -workspace "AFSignedHTTPRequestOperationManager.xcworkspace" -scheme AFSignedHTTPRequestOperationManagerTests -destination "platform=iOS Simulator,name=iPhone 6s"
+  - pod lib lint
