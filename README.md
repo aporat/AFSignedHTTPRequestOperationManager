@@ -1,11 +1,9 @@
 # AFSignedHTTPRequestOperationManager
 
 [![Build Status](https://travis-ci.org/aporat/AFSignedHTTPRequestOperationManager.svg?branch=master)](https://travis-ci.org/aporat/AFSignedHTTPRequestOperationManager) &nbsp;
-![](http://cocoapod-badges.herokuapp.com/v/AFSignedHTTPRequestOperationManager/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/AFSignedHTTPRequestOperationManager/badge.png) &nbsp;[![Dependency Status](https://www.versioneye.com/user/projects/5376544914c15877850000b7/badge.svg)](https://www.versioneye.com/user/projects/5376544914c15877850000b7)
+![](http://cocoapod-badges.herokuapp.com/v/AFSignedHTTPRequestOperationManager/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/AFSignedHTTPRequestOperationManager/badge.png)
 
 Automatically sign AFNetworking api requests with SHA-256 hash signature and timestamp.
-
-Sample usage is available in the `example` project.
 
 The purpose of the SHA256 signature is to guarantee that restful API requests are being delivered only by authorized api clients.
 
