@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		533E2D631CEB75DF004D12B6 /* AFSignedSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 533E2D611CEB75DF004D12B6 /* AFSignedSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		533E2D641CEB75DF004D12B6 /* AFSignedSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 533E2D621CEB75DF004D12B6 /* AFSignedSessionManager.m */; };
 		533E2D671CEB75F0004D12B6 /* AFSignedHTTPRequestOperationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E2D651CEB75ED004D12B6 /* AFSignedHTTPRequestOperationManagerTests.swift */; };
 		533E2D6E1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 533E2D6D1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5354B4BC1DAF39C200DABC05 /* AFSignedHTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5354B4BB1DAF39C200DABC05 /* AFSignedHTTPRequestSerializer.swift */; };
 		6DF7DF781CD5393F0099C320 /* AFSignedHTTPRequestOperationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF7DF6D1CD5393E0099C320 /* AFSignedHTTPRequestOperationManager.framework */; };
 		CB608B531E231326916E23FC /* Pods_AFSignedHTTPRequestOperationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80062939D100F908649092B /* Pods_AFSignedHTTPRequestOperationManager.framework */; };
 		FCEEC80D47D4B60AA4424B52 /* Pods_AFSignedHTTPRequestOperationManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCC7DF60969D1D2EAEC9B2D /* Pods_AFSignedHTTPRequestOperationManagerTests.framework */; };
@@ -28,10 +27,9 @@
 
 /* Begin PBXFileReference section */
 		0C9E0D2C24D9E454232D0A2A /* Pods-AFSignedHTTPRequestOperationManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFSignedHTTPRequestOperationManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFSignedHTTPRequestOperationManagerTests/Pods-AFSignedHTTPRequestOperationManagerTests.release.xcconfig"; sourceTree = "<group>"; };
-		533E2D611CEB75DF004D12B6 /* AFSignedSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSignedSessionManager.h; sourceTree = "<group>"; };
-		533E2D621CEB75DF004D12B6 /* AFSignedSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSignedSessionManager.m; sourceTree = "<group>"; };
 		533E2D651CEB75ED004D12B6 /* AFSignedHTTPRequestOperationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFSignedHTTPRequestOperationManagerTests.swift; sourceTree = "<group>"; };
 		533E2D6D1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFSignedHTTPRequestOperationManager-umbrella.h"; sourceTree = "<group>"; };
+		5354B4BB1DAF39C200DABC05 /* AFSignedHTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFSignedHTTPRequestSerializer.swift; sourceTree = "<group>"; };
 		6DF7DF6D1CD5393E0099C320 /* AFSignedHTTPRequestOperationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFSignedHTTPRequestOperationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF7DF721CD5393F0099C320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF7DF771CD5393F0099C320 /* AFSignedHTTPRequestOperationManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFSignedHTTPRequestOperationManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,8 +94,7 @@
 		6DF7DF6F1CD5393E0099C320 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				533E2D611CEB75DF004D12B6 /* AFSignedSessionManager.h */,
-				533E2D621CEB75DF004D12B6 /* AFSignedSessionManager.m */,
+				5354B4BB1DAF39C200DABC05 /* AFSignedHTTPRequestSerializer.swift */,
 				6DF7DF8D1CD53DEC0099C320 /* Supporting Files */,
 			);
 			path = Source;
@@ -139,7 +136,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533E2D631CEB75DF004D12B6 /* AFSignedSessionManager.h in Headers */,
 				533E2D6E1CEB8C06004D12B6 /* AFSignedHTTPRequestOperationManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,12 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DF7DF811CD5393F0099C320 /* Build configuration list for PBXNativeTarget "AFSignedHTTPRequestOperationManager" */;
 			buildPhases = (
-				2F087A8E5BC5DDA1720A1669 /* 📦 Check Pods Manifest.lock */,
+				2F087A8E5BC5DDA1720A1669 /* [CP] Check Pods Manifest.lock */,
 				6DF7DF681CD5393E0099C320 /* Sources */,
 				6DF7DF691CD5393E0099C320 /* Frameworks */,
 				6DF7DF6A1CD5393E0099C320 /* Headers */,
 				6DF7DF6B1CD5393E0099C320 /* Resources */,
-				B54BFB0D209163EE2A0D1DA7 /* 📦 Copy Pods Resources */,
+				B54BFB0D209163EE2A0D1DA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,12 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DF7DF841CD5393F0099C320 /* Build configuration list for PBXNativeTarget "AFSignedHTTPRequestOperationManagerTests" */;
 			buildPhases = (
-				C793011415E386BFD02D2C6D /* 📦 Check Pods Manifest.lock */,
+				C793011415E386BFD02D2C6D /* [CP] Check Pods Manifest.lock */,
 				6DF7DF731CD5393F0099C320 /* Sources */,
 				6DF7DF741CD5393F0099C320 /* Frameworks */,
 				6DF7DF751CD5393F0099C320 /* Resources */,
-				55419167F5618A247F346441 /* 📦 Embed Pods Frameworks */,
-				5C39CB57870A97B0E3FBD0B3 /* 📦 Copy Pods Resources */,
+				55419167F5618A247F346441 /* [CP] Embed Pods Frameworks */,
+				5C39CB57870A97B0E3FBD0B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,19 +191,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = delba;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Adar Porat";
 				TargetAttributes = {
 					6DF7DF6C1CD5393E0099C320 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					6DF7DF761CD5393F0099C320 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
 			buildConfigurationList = 6DF7DF671CD5393E0099C320 /* Build configuration list for PBXProject "AFSignedHTTPRequestOperationManager" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -242,29 +240,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F087A8E5BC5DDA1720A1669 /* 📦 Check Pods Manifest.lock */ = {
+		2F087A8E5BC5DDA1720A1669 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		55419167F5618A247F346441 /* 📦 Embed Pods Frameworks */ = {
+		55419167F5618A247F346441 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,14 +270,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFSignedHTTPRequestOperationManagerTests/Pods-AFSignedHTTPRequestOperationManagerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C39CB57870A97B0E3FBD0B3 /* 📦 Copy Pods Resources */ = {
+		5C39CB57870A97B0E3FBD0B3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,14 +285,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFSignedHTTPRequestOperationManagerTests/Pods-AFSignedHTTPRequestOperationManagerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B54BFB0D209163EE2A0D1DA7 /* 📦 Copy Pods Resources */ = {
+		B54BFB0D209163EE2A0D1DA7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,19 +300,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AFSignedHTTPRequestOperationManager/Pods-AFSignedHTTPRequestOperationManager-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C793011415E386BFD02D2C6D /* 📦 Check Pods Manifest.lock */ = {
+		C793011415E386BFD02D2C6D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -324,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				533E2D641CEB75DF004D12B6 /* AFSignedSessionManager.m in Sources */,
+				5354B4BC1DAF39C200DABC05 /* AFSignedHTTPRequestSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +348,7 @@
 		6DF7DF7F1CD5393F0099C320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -361,8 +360,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -399,6 +400,7 @@
 		6DF7DF801CD5393F0099C320 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -410,8 +412,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -431,6 +435,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -443,6 +448,7 @@
 			baseConfigurationReference = 87BB923384327B71F08CE69E /* Pods-AFSignedHTTPRequestOperationManager.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -450,11 +456,11 @@
 				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Source/Supporting Files/AFSignedHTTPRequestOperationManager.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adarporat.AFSignedHTTPRequestOperationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -463,6 +469,7 @@
 			baseConfigurationReference = D5E169C701C679DB6737F0AB /* Pods-AFSignedHTTPRequestOperationManager.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -470,10 +477,10 @@
 				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Source/Supporting Files/AFSignedHTTPRequestOperationManager.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adarporat.AFSignedHTTPRequestOperationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -481,10 +488,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A6D83926926B45FAB61DF289 /* Pods-AFSignedHTTPRequestOperationManagerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adarporat.AFSignedHTTPRequestOperationManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -492,10 +501,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C9E0D2C24D9E454232D0A2A /* Pods-AFSignedHTTPRequestOperationManagerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adarporat.AFSignedHTTPRequestOperationManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
