@@ -83,7 +83,12 @@ open class AFSignedHTTPRequestSerializer : AFJSONRequestSerializer {
     
     let encodedParamerers = NSMutableArray()
     for (_, key) in sortedKeys.enumerated() {
-      encodedParamerers.add(encode(key, value: lowerCaseParams[key]))
+      
+      if let value = lowerCaseParams[key] {
+        encodedParamerers.add(encode(key, value: value))
+      } else {
+        encodedParamerers.add(encode(key, value: ""))
+      }
     }
     
     return encodedParamerers.componentsJoined(by: "&")
