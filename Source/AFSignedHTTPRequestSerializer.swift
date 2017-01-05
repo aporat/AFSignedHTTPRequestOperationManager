@@ -3,7 +3,7 @@ import IGDigest
 
 open class AFSignedHTTPRequestSerializer : AFJSONRequestSerializer {
   
-  open var clientVersion = "3"
+  open var clientVersion = "4"
   open var clientId: String
   open var clientSecret: String
   
@@ -36,18 +36,14 @@ open class AFSignedHTTPRequestSerializer : AFJSONRequestSerializer {
       newParams = currentParams
     }
     
-    let signedParams = self.signatureParams(method, urlString: URLString, params: newParams)
-    for key in signedParams.keys {
-      newParams[key] = signedParams[key]
-    }
-    
     let request = super.request(withMethod: method, urlString: URLString, parameters: newParams, error: error)
+    addSignatureHeaders(request, method: method, urlString: URLString, params: newParams)
     
     return request
   }
   
   
-  open func signatureParams(_ method : String, urlString : String, params : [String : Any?]) -> [String : Any] {
+  open func addSignatureHeaders(_ request : NSMutableURLRequest, method : String, urlString : String, params : [String : Any?]) {
     
     let timestamp = String(format: "%d", Int(Date().timeIntervalSince1970))
     
@@ -60,14 +56,10 @@ open class AFSignedHTTPRequestSerializer : AFJSONRequestSerializer {
     let signatureParam = components.joined(separator: "\n")
     let signature = signatureParam.sha256HMAC(withKey: clientSecret)
     
-    var signedParams = [String : Any]()
-    
-    signedParams["auth_version"] = self.clientVersion
-    signedParams["auth_client_id"] = self.clientId
-    signedParams["auth_timestamp"] = timestamp
-    signedParams["auth_signature"] = signature
-    
-    return signedParams
+    request.setValue(self.clientVersion, forHTTPHeaderField: "X-Auth-Version")
+    request.setValue(self.clientId, forHTTPHeaderField: "X-Auth-Client-ID")
+    request.setValue(timestamp, forHTTPHeaderField: "X-Auth-Timestamp")
+    request.setValue(signature, forHTTPHeaderField: "X-Auth-Signature")
   }
   
   open func parameterString(_ params : [String : Any?]) -> String {
@@ -85,48 +77,40 @@ open class AFSignedHTTPRequestSerializer : AFJSONRequestSerializer {
     for (_, key) in sortedKeys.enumerated() {
       
       if let value = lowerCaseParams[key] {
-        encodedParamerers.add(encode(key, value: value))
+        let encodedParamerer = encode(key, value: value)
+        
+        if !encodedParamerer.isEmpty {
+          encodedParamerers.add(encodedParamerer)
+        }
       } else {
-        encodedParamerers.add(encode(key, value: ""))
+        let encodedParamerer = encode(key, value: "")
+        
+        if !encodedParamerer.isEmpty {
+          encodedParamerers.add(encodedParamerer)
+        }
       }
     }
     
     return encodedParamerers.componentsJoined(by: "&")
   }
   
-  open func encode(_ key : String, value : Any?) -> String {
+  func encode(_ key : String, value : Any?) -> String {
     
     if let currentValue = value as? [String : Any] {
       if currentValue.count == 0 {
-        return ""
+        return String(format: "%@=%@", key.af_urlEncodedString(), "")
       }
       
-      do {
-        let json = try JSONSerialization.data(withJSONObject: currentValue, options: [])
-        
-        if let jsonString = String(data: json, encoding: String.Encoding.utf8) {
-          
-          return String(format: "%@=%@", key.af_urlEncodedString(), jsonString.af_urlEncodedString())
-        }
-        
-      }
-      catch _ as NSError {
+      if let json = try? JSONSerialization.data(withJSONObject: currentValue, options: []), let jsonString = String(data: json, encoding: String.Encoding.utf8) {
+        return String(format: "%@=%@", key.af_urlEncodedString(), jsonString.af_urlEncodedString())
       }
     } else if let currentValue = value as? Array<Any> {
       if currentValue.count == 0 {
-        return ""
+        return String(format: "%@=%@", key.af_urlEncodedString(), "")
       }
       
-      
-      do {
-        let json = try JSONSerialization.data(withJSONObject: currentValue, options: [])
-        
-        if let jsonString = String(data: json, encoding: String.Encoding.utf8) {
-          return String(format: "%@=%@", key.af_urlEncodedString(), jsonString.af_urlEncodedString())
-        }
-        
-      }
-      catch _ as NSError {
+      if let json = try? JSONSerialization.data(withJSONObject: currentValue, options: []), let jsonString = String(data: json, encoding: String.Encoding.utf8) {
+        return String(format: "%@=%@", key.af_urlEncodedString(), jsonString.af_urlEncodedString())
       }
     } else if let currentValue = value as? String {
       return String(format: "%@=%@", key.af_urlEncodedString(), currentValue.af_urlEncodedString())
@@ -136,6 +120,8 @@ open class AFSignedHTTPRequestSerializer : AFJSONRequestSerializer {
       return String(format: "%@=%@", key.af_urlEncodedString(), NSNumber(value: currentValue))
     } else if let currentValue = value as? Double {
       return String(format: "%@=%@", key.af_urlEncodedString(), NSNumber(value: currentValue))
+    } else {
+      return String(format: "%@=%@", key.af_urlEncodedString(), "")
     }
     
     return ""
