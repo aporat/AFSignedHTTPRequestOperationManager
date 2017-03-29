@@ -131,10 +131,9 @@ open class AFSignedHTTPRequestSerializer : AFJSONRequestSerializer {
 extension String {
   
   public func af_urlEncodedString() -> String {
-    let charactersToBeEscaped = "!*'\"();:@&=+$,/?%#[]% " as CFString
+    let customAllowedSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~")
+    let escapedString = self.addingPercentEncoding(withAllowedCharacters: customAllowedSet)
     
-    let result = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, self as CFString!, nil, charactersToBeEscaped, CFStringConvertNSStringEncodingToEncoding(String.Encoding.utf8.rawValue))
-    
-    return result as! String
+    return escapedString!
   }
 }
